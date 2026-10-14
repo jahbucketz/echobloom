@@ -1,295 +1,411 @@
-/* ==========================
-   ECHOBLOOM STYLE SHEET
-   ========================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EchoBloom | Emotions Bloom Through Meaningful Messages</title>
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap
 
-/* ---------- Root Colors ---------- */
-
-:root {
-    --sage: #6B8F71;
-    --coral: #F28C8C;
-    --cream: #FFF9F2;
-    --gold: #D6B36A;
-    --teal: #2F5D62;
-    --charcoal: #333333;
-    --white: #ffffff;
-    --light-gray: #f7f7f7;
+<style>
+:root{
+    --sage:#6B8F71;
+    --coral:#F28C8C;
+    --cream:#FFF9F2;
+    --gold:#D6B36A;
+    --teal:#2F5D62;
+    --dark:#333333;
 }
 
-/* ---------- Global ---------- */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+    font-family:'Poppins', sans-serif;
+    background:var(--cream);
+    color:var(--dark);
+    line-height:1.6;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--cream);
-    color: var(--charcoal);
-    line-height: 1.7;
+header{
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 2rem;
 }
 
-a {
-    text-decoration: none;
+.logo{
+    font-family:'Playfair Display', serif;
+    color:var(--teal);
+    font-size:2rem;
+    font-weight:700;
 }
 
-/* ---------- Header ---------- */
-
-header {
-    background: var(--white);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+nav ul{
+    display:flex;
+    gap:1.5rem;
+    list-style:none;
 }
 
-nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem 2rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
 }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--teal);
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(rgba(255,249,242,.95),rgba(255,249,242,.95));
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    color:var(--teal);
+    margin-bottom:15px;
 }
 
-.nav-links a {
-    color: var(--charcoal);
-    font-weight: 500;
-    transition: 0.3s;
+.hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:1.1rem;
 }
 
-.nav-links a:hover {
-    color: var(--coral);
+.buttons{
+    margin-top:30px;
 }
 
-/* ---------- Hero ---------- */
-
-.hero {
-    padding: 120px 20px;
-    text-align: center;
-
-    background: linear-gradient(
-        rgba(255,249,242,0.95),
-        rgba(255,249,242,0.95)
-    );
+.btn{
+    display:inline-block;
+    padding:12px 24px;
+    margin:10px;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
 }
 
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    color: var(--teal);
-    margin-bottom: 1rem;
+.primary{
+    background:var(--coral);
+    color:white;
 }
 
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 1.1rem;
+.secondary{
+    background:var(--sage);
+    color:white;
 }
 
-/* ---------- Buttons ---------- */
-
-.button-group {
-    margin-top: 2rem;
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
-    margin: 0.5rem;
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-family:'Playfair Display', serif;
+    color:var(--teal);
+    font-size:2.2rem;
 }
 
-.btn-primary {
-    background: var(--coral);
-    color: white;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
-.btn-primary:hover {
-    background: #ee7575;
-    transform: translateY(-2px);
+.card{
+    background:white;
+    border-radius:14px;
+    padding:25px;
+    box-shadow:0 4px 16px rgba(0,0,0,.08);
 }
 
-.btn-secondary {
-    background: var(--sage);
-    color: white;
+.card h3{
+    color:var(--teal);
+    margin-bottom:10px;
 }
 
-.btn-secondary:hover {
-    background: #598360;
-    transform: translateY(-2px);
+.price{
+    color:var(--coral);
+    font-weight:700;
+    margin-top:10px;
 }
 
-/* ---------- Sections ---------- */
-
-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 80px 20px;
+.about{
+    background:white;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--teal);
+.policy-box{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
 }
 
-/* ---------- Card Grid ---------- */
-
-.grid {
-    display: grid;
-    gap: 30px;
+footer{
+    background:var(--teal);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
 }
 
-.grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+footer a{
+    color:#fff;
+    text-decoration:none;
 }
 
-/* ---------- Cards ---------- */
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: 0.3s;
+.contact{
+    text-align:center;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+.contact p{
+    margin:10px 0;
 }
 
-.card h3 {
-    color: var(--teal);
-    margin-bottom: 12px;
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
 }
 
-.card p {
-    margin-bottom: 12px;
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
-.price {
-    color: var(--coral);
-    font-size: 1.2rem;
-    font-weight: 700;
+.hero h1{
+    font-size:2.2rem;
 }
 
-/* ---------- Featured Collections ---------- */
-
-.collection-card {
-    text-align: center;
 }
+</style>
+</head>
 
-.collection-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
+<body>
 
-/* ---------- About Section ---------- */
+<header>
+<nav>
+<div class="logo">EchoBloom</div>
 
-.about {
-    background: white;
-    border-radius: 20px;
-    padding: 50px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-}
+<ul>
+<li>#homeHome</a></li>
+<li>#aboutAbout</a></li>
+<li>#collectionsCollections</a></li>
+<li>#productsProducts</a></li>
+<li>#policiesPolicies</a></li>
+<li>#contactContact</a></li>
+</ul>
+</nav>
+</header>
 
-/* ---------- Policy Boxes ---------- */
+<section class="hero" id="home">
+<h1>Emotions Bloom Through Meaningful Messages</h1>
 
-.policy-box {
-    background: white;
-    padding: 25px;
-    border-left: 5px solid var(--sage);
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
+<p>
+Personalized greeting cards designed to help you celebrate,
+appreciate, encourage, and connect. EchoBloom combines thoughtful
+design with AI-assisted creativity to create cards that feel
+personal, memorable, and genuinely heartfelt.
+</p>
 
-.policy-box h3 {
-    color: var(--teal);
-    margin-bottom: 10px;
-}
+<div class="buttons">
+#productsShop Greeting Cards</a>
+#collectionsBrowse Collections</a>
+</div>
+</section>
 
-/* ---------- Product Cards ---------- */
+<section>
+<h2 class="section-title">Why Choose EchoBloom?</h2>
 
-.product-card {
-    overflow: hidden;
-}
+<div class="grid">
+<div class="card">
+<h3>Personalized Messages</h3>
+<p>Create cards inspired by memories, relationships, and meaningful moments.</p>
+</div>
 
-.product-image {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
+<div class="card">
+<h3>Modern Designs</h3>
+<p>Fresh, elegant artwork designed for today's gift-givers and special occasions.</p>
+</div>
 
-.product-title {
-    color: var(--teal);
-    margin-bottom: 10px;
-}
+<div class="card">
+<h3>Affordable Options</h3>
+<p>Choose from printed cards, personalized cards, or digital downloads.</p>
+</div>
+</div>
+</section>
 
-.product-description {
-    margin-bottom: 15px;
-}
+<section id="collections">
+<h2 class="section-title">Featured Collections</h2>
 
-/* ---------- Contact ---------- */
+<div class="grid">
 
-.contact {
-    text-align: center;
-}
+<div class="card">
+<h3>🌸 Birthday Bloom Collection</h3>
+<p>Celebrate growth, milestones, and unforgettable birthdays.</p>
+</div>
 
-.contact p {
-    margin: 10px 0;
-}
+<div class="card">
+<h3>❤️ Love & Romance Collection</h3>
+<p>Thoughtful cards for anniversaries, relationships, and special moments.</p>
+</div>
 
-/* ---------- Newsletter ---------- */
+<div class="card">
+<h3>🌿 Family Appreciation Collection</h3>
+<p>Express gratitude and love for the people who support you most.</p>
+</div>
 
-.newsletter {
-    background: var(--teal);
-    color: white;
-    border-radius: 20px;
-    text-align: center;
-    padding: 60px 30px;
-}
+</div>
+</section>
 
-.newsletter h2 {
-    margin-bottom: 15px;
-}
+<section id="products">
+<h2 class="section-title">Featured Products</h2>
 
-.newsletter input {
-    width: 100%;
-    max-width: 400px;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    
+<div class="grid">
+
+<div class="card">
+<h3>The Best Chapters Ahead</h3>
+<p><strong>Cover:</strong> Your story gets better every year.</p>
+<p>Celebrate personal growth, achievements, and exciting possibilities ahead.</p>
+<p class="price">$5.99</p>
+</div>
+
+<div class="card">
+<h3>Our Favorite Place</h3>
+<p><strong>Cover:</strong> My favorite place has never been a place.</p>
+<p>A romantic card celebrating companionship and meaningful connection.</p>
+<p class="price">$7.99</p>
+</div>
+
+<div class="card">
+<h3>Roots That Hold Me</h3>
+<p><strong>Cover:</strong> Everything I am grew from your love.</p>
+<p>A heartfelt family appreciation card honoring support and guidance.</p>
+<p class="price">$5.99</p>
+</div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<h2 class="section-title">About EchoBloom</h2>
+
+<p>
+EchoBloom was created around a simple belief: meaningful words have
+the power to strengthen relationships.
+</p>
+
+<br>
+
+<p>
+In a world filled with quick messages and temporary communication,
+greeting cards remain a lasting way to celebrate milestones, express
+gratitude, and share heartfelt emotions.
+</p>
+
+<br>
+
+<p>
+By combining thoughtful design with AI-assisted creativity,
+EchoBloom helps people communicate what matters most.
+</p>
+
+<br>
+
+<h3>Our Mission</h3>
+
+<p>
+EchoBloom helps people express meaningful emotions through personalized
+greeting cards that feel genuine and memorable. By combining thoughtful
+design with AI-powered creativity, we make heartfelt communication
+more personal, accessible, and impactful.
+</p>
+</section>
+
+<section id="policies">
+<h2 class="section-title">Store Policies</h2>
+
+<div class="policy-box">
+<h3>Shipping</h3>
+<p>
+Orders are proposed to be processed within 2–4 business days.
+Shipping times may vary by location.
+</p>
+</div>
+
+<div class="policy-box">
+<h3>Returns & Refunds</h3>
+<p>
+Standard products may be returned within 14 days of delivery.
+Personalized products may not be eligible for return unless damaged.
+</p>
+</div>
+
+<div class="policy-box">
+<h3>Damaged Products</h3>
+<p>
+Customers should contact support within 7 days and provide photos
+of damaged products for review.
+</p>
+</div>
+
+<div class="policy-box">
+<h3>Digital Downloads</h3>
+<p>
+Digital greeting cards are delivered immediately after purchase and
+are available for personal use only.
+</p>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2 class="section-title">Contact EchoBloom</h2>
+
+<p>Email: hello@echobloomcards.com</p>
+<p>Instagram: @EchoBloomCards</p>
+<p>TikTok: @EchoBloomCards</p>
+
+<br>
+
+#products
+Shop Greeting Cards
+</a>
+</section>
+
+<footer>
+<h3>EchoBloom</h3>
+
+<p>Emotions bloom and echo through meaningful messages.</p>
+
+<br>
+
+<p>
+Home • About • Collections • Products • Policies • Contact
+</p>
+
+<br>
+
+<p>
+© 2026 EchoBloom. All Rights Reserved.
+</p>
+</footer>
+
+</body>
+</html>
