@@ -1,0 +1,295 @@
+/* ==========================
+   ECHOBLOOM STYLE SHEET
+   ========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ---------- Root Colors ---------- */
+
+:root {
+    --sage: #6B8F71;
+    --coral: #F28C8C;
+    --cream: #FFF9F2;
+    --gold: #D6B36A;
+    --teal: #2F5D62;
+    --charcoal: #333333;
+    --white: #ffffff;
+    --light-gray: #f7f7f7;
+}
+
+/* ---------- Global ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: var(--white);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--teal);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--charcoal);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--coral);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    padding: 120px 20px;
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(255,249,242,0.95),
+        rgba(255,249,242,0.95)
+    );
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--teal);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.button-group {
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--coral);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #ee7575;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--sage);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #598360;
+    transform: translateY(-2px);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--teal);
+}
+
+/* ---------- Card Grid ---------- */
+
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: var(--teal);
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.price {
+    color: var(--coral);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* ---------- Featured Collections ---------- */
+
+.collection-card {
+    text-align: center;
+}
+
+.collection-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ---------- About Section ---------- */
+
+.about {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* ---------- Policy Boxes ---------- */
+
+.policy-box {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid var(--sage);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.policy-box h3 {
+    color: var(--teal);
+    margin-bottom: 10px;
+}
+
+/* ---------- Product Cards ---------- */
+
+.product-card {
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    color: var(--teal);
+    margin-bottom: 10px;
+}
+
+.product-description {
+    margin-bottom: 15px;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+/* ---------- Newsletter ---------- */
+
+.newsletter {
+    background: var(--teal);
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.newsletter h2 {
+    margin-bottom: 15px;
+}
+
+.newsletter input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    
